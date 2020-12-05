@@ -17,7 +17,7 @@ class Song
     song = filename.split(' - ')[1] # splits it into song name
     artist = filename.split(' - ')[0] # and artist name
     # binding.pry
-    new_song = Song.new(song) # creates new instance of song
+    new_song = self.new(song) # creates new instance of song
     # links instance of artist to song even if there isn't one yet
     new_song.artist = Artist.find_or_create_by_name(artist) 
     new_song  # returns new song instance with everything linked

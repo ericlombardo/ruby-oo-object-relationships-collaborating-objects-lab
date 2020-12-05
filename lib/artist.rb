@@ -25,7 +25,7 @@ class Artist
   
   def self.find_or_create_by_name(artist_name)  # take name as String
     artist = @@all.find {|artist| artist.name == artist_name} #=> nil or instance of artist
-    artist == nil ? artist = Artist.new(artist_name) : artist #=> artist instance, creates new if needed
+    artist == nil ? artist = self.new(artist_name) : artist #=> artist instance, creates new if needed
   end
   
   def print_songs 
